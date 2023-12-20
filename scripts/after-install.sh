@@ -23,5 +23,5 @@ python3 -m pip install --upgrade flask werkzeug
 sudo chown -R ubuntu:ubuntu .
 
 # Start the Python application and store its PID in a file
-nohup python3 app.py > /var/log/flask-app.log 2>&1 &
-echo $! | sudo tee /var/run/flask-app.pid > /dev/null
+python3 app.py > /var/log/flask-app.log 2>&1 &
+#echo $! | sudo tee /var/run/flask-app.pid > /dev/null
