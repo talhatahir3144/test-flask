@@ -3,9 +3,9 @@
 set -e
 
 # Set executable permissions for specific scripts
-chmod +x /var/www/flask-app/scripts/after-install.sh
-chmod +x /var/www/flask-app/scripts/application-start.sh
-chmod +x /var/www/flask-app/scripts/application-stop.sh
+#chmod +x /var/www/flask-app/scripts/after-install.sh
+#chmod +x /var/www/flask-app/scripts/application-start.sh
+#chmod +x /var/www/flask-app/scripts/application-stop.sh
 
 # Stop the existing application server
 sudo systemctl stop myapp.service || echo "Application server could not be stopped or was not running."
