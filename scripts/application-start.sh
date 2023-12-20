@@ -1,10 +1,13 @@
 #!/bin/bash
 
-# Navigate to the application directory
-cd /var/www/flask-app
+# Name of the application, adjust as per your Python script's name
+APP_NAME="app.py"
 
-# Install dependencies
-python3 -m pip install -r requirements.txt
-python3 -m pip install --upgrade flask werkzeug
+# Use pgrep to find the process ID of your Flask app based on its name
+PID=$(pgrep -f $APP_NAME)
 
-python3 app.py > /var/log/flask-app.log 2>&1 &
+# If the application is running, kill it
+if [ ! -z "$PID" ]; then
+    echo "Stopping Flask app"
+    kill $PID
+fi
