@@ -16,14 +16,14 @@ permissions:
 
 hooks:
   BeforeInstall:
-    - location: scripts/before-install.sh
+    - location: /var/www/flask-app/scripts/before-install.sh
       timeout: 300
   AfterInstall:
-    - location: scripts/after-install.sh
+    - location: var/www/flask-app/scripts/after-install.sh
       timeout: 300
   ApplicationStop:
-    - location: scripts/application-stop.sh
+    - location: /var/www/flask-app/scripts/application-stop.sh
       timeout: 300
   ApplicationStart:
-    - location: scripts/application-start.sh
+    - location: /var/www/flask-app/scripts/application-start.sh
       timeout: 300
