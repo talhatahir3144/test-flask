@@ -1,0 +1,29 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/flask-app
+
+permissions:
+  - object: /var/www/flask-app/scripts/before-install.sh
+    permissions: +x
+  - object: /var/www/flask-app/scripts/after-install.sh
+    permissions: +x
+  - object: /var/www/flask-app/scripts/application-start.sh
+    permissions: +x
+  - object: /var/www/flask-app/scripts/application-stop.sh
+    permissions: +x
+
+hooks:
+  BeforeInstall:
+    - location: scripts/before-install.sh
+      timeout: 300
+  AfterInstall:
+    - location: scripts/after-install.sh
+      timeout: 300
+  ApplicationStop:
+    - location: scripts/application-stop.sh
+      timeout: 300
+  ApplicationStart:
+    - location: scripts/application-start.sh
+      timeout: 300
