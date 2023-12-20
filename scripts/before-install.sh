@@ -10,8 +10,6 @@ chmod +x /var/www/flask-app/scripts/application-stop.sh
 # Stop the existing application server
 sudo systemctl stop myapp.service || echo "Application server could not be stopped or was not running."
 
-# Clean up any existing files in the application directory
-sudo rm -rf /var/www/flask-app/*
 # Installing Python
 sudo apt-get update
 sudo apt-get install -y python3
