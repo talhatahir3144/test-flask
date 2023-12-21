@@ -15,4 +15,4 @@ PID_5000_PORT=$(sudo lsof -i :5000 | grep LISTEN | awk '{print $2}')
 
 # #Use pgrep to find the process ID of your Flask app based on its name
 echo "Stopping Flask app: $PID_5000_PORT"
-#kill $PID_5000_PORT
+sudo kill $PID_5000_PORT
