@@ -22,5 +22,5 @@ if [ -z "$PID" ]; then
     echo "No process is using port 5000."
 else
     echo "Killing process on port 5000 with PID: $PID"
-    sudo kill $PID
+    echo $PID
 fi
