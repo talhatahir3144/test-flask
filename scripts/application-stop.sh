@@ -16,4 +16,4 @@
 # #!/bin/bash
 
 # Find the process using port 5000 and kill it
-PID=$(sudo lsof -i :5000 | grep LISTEN | awk '{print $2}')
+#PID=$(sudo lsof -i :5000 | grep LISTEN | awk '{print $2}')
