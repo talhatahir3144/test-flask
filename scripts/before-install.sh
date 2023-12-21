@@ -8,7 +8,7 @@ set -e
 #chmod +x /var/www/flask-app/scripts/application-stop.sh
 
 # Stop the existing application server
-sudo systemctl stop myapp.service || echo "Application server could not be stopped or was not running."
+sudo systemctl stop app.service || echo "Application server could not be stopped or was not running."
 
 # Installing Python
 sudo apt-get update
